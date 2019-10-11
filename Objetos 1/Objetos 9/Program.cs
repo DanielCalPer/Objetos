@@ -74,6 +74,8 @@ namespace Objetos_9
             Contacto2 Jone2 = new Contacto2("Jone", "6 / 6 / 1992");
             Contacto2 Mikel2 = new Contacto2("Mikel", "7 / 7 / 1997", "Familia");
 
+            Console.WriteLine();
+
             Miren2.MostrarDatos(); 
             Jon2.MostrarDatos(); 
             Ane2.MostrarDatos(); 

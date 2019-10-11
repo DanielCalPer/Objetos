@@ -9,10 +9,9 @@ namespace Objetos_9
         public string Nombre { get; set; }
         public int Telefono { get; set; }
         public DateTime Fechadenacimiento { get; set; }
-
         public String Tipodecontacto { get; set; }
 
-        public Contacto2 (string nombre, int telefono, string fechadenacimiento, string tipodecontacto) //CONSTRUCTOR 1
+        public Contacto2(string nombre, int telefono, string fechadenacimiento, string tipodecontacto) //CONSTRUCTOR 1
         {
             Nombre = nombre;
             Telefono = telefono;
@@ -34,7 +33,7 @@ namespace Objetos_9
                     tipodecontacto = "estudios";
                     break;
                 default:
-                    tipodecontacto = "No has introducido un valor válido";
+                    tipodecontacto = "amigos";
                     break;
             }
 
@@ -74,34 +73,17 @@ namespace Objetos_9
             Fechadenacimiento = DateTime.Today;
             Tipodecontacto = tipodecontacto;
         }
-        public Contacto2 (string nombre, string tipodecontacto) // CONSTRUCTOR 4
+        public Contacto2(string nombre, string fechadenacimiento) // CONSTRUCTOR 4
         {
-            Nombre = nombre; 
-            switch (tipodecontacto.ToLower())
-            {
-                case "familia":
-                    tipodecontacto = "amigos";
-                    break;
-                case "amigos":
-                    tipodecontacto = "amigos";
-                    break;
-                case "trabajo":
-                    tipodecontacto = "amigos";
-                    break;
-                case "estudios":
-                    tipodecontacto = "amigos";
-                    break;
-                default:
-                    tipodecontacto = "amigos";
-                    break;
-            }
-        }
+            Nombre = nombre;
+            Tipodecontacto = "Amigos";
 
+        }
         public void MostrarDatos()
         {
 
             Console.WriteLine($"Nombre: {Nombre} \n Teléfono: {Telefono} \n Fecha de nacimiento: {Fechadenacimiento} \n Tipo de contacto: {Tipodecontacto}");
 
         }
-    }
+    } 
 }
